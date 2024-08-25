@@ -1,0 +1,668 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Figtree", sans-serif;
+}
+
+body {
+    background-color: black;
+    color: white;
+}
+
+.left {
+    width: 21vw;
+    height: 630px;
+    margin: 5px;
+    margin-right: 4px;
+}
+
+.right {
+    width: 79vw;
+    height: 570px;
+}
+
+.home {
+    padding: 25px;
+    margin: 2.5px 0px;
+    height: 110px;
+    margin-bottom: 7px;
+    margin-left: 2.5px;
+    padding-top: 20px;
+}
+
+.home ul li {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.home ul {
+    display: flex;
+    flex-direction: column;
+    gap: 22px 0px;
+    font-weight: 700;
+}
+
+.Library {
+    color: #b3b3b3;
+    height: 447px;
+    margin-left: 2.5px;
+    position: relative;
+    padding: 5px;
+    z-index: 10;
+}
+
+.libbox {
+    display: flex;
+    gap: 0px 10px;
+    align-items: center;
+
+}
+
+.libbox h3 {
+    font-size: 16px;
+    color: #b3b3b3;
+}
+
+.your {
+    margin: 8px 0px;
+    padding: 5px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 65px;
+}
+
+.footer {
+    display: flex;
+    padding: 25px;
+    flex-wrap: wrap;
+    gap: 12px 15px;
+    align-self: flex-end;
+    position: absolute;
+    bottom: 10px;
+}
+
+.footer a {
+    font-size: 11px;
+    font-weight: 400;
+    color: rgb(167, 167, 167);
+    text-decoration: none;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 63px;
+    background-color: rgb(15, 15, 15);
+    border-radius: 10px 10px 0px 0px;
+}
+
+.nav {
+    margin-left: 27px;
+}
+
+.buttons {
+    margin-right: 27px;
+}
+
+.nav button {
+    background-color: #050505;
+    border: none;
+    border-radius: 1000px;
+    width: 35px;
+    height: 35px;
+    margin-right: 4px;
+}
+
+.buttons button {
+    background-color: white;
+    color: black;
+    border: none;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 700;
+    height: 48px;
+    width: 110px;
+    border-radius: 200px;
+}
+
+.buttons button:hover {
+    transform: scale(1.05);
+}
+
+button {
+    cursor: pointer;
+}
+
+#pehli {
+    background-color: transparent;
+    color: #b3b3b3f6;
+}
+
+#pehli:hover {
+    transform: scale(1.05);
+    color: white;
+}
+
+.right {
+    background-color: rgb(28, 28, 28);
+    margin: 4px;
+    margin-top: 8px;
+    margin-right: 8px;
+}
+
+.spot-playlist {
+    padding: 10px 15px;
+    font-weight: 700;
+    font-size: 16px;
+    padding-right: 0;
+}
+
+.card {
+    /* border: 2px solid salmon; */
+    width: 180px;
+    padding: 12px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    color: #b3b3b3;
+    /* background-color: rgb(25, 24, 25); */
+    border-radius: 6px;
+    position: relative;
+    overflow: hidden;
+}
+
+.card>* {
+    padding-top: 10px;
+}
+
+.card h4 {
+    font-size: 15.5px;
+    font-weight: 500;
+    color: white;
+    padding-top: 5px;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 8px;
+    padding: 0;
+
+}
+
+.spot-playlist h2 {
+    margin-bottom: 15px;
+    margin-left: 15px;
+}
+
+.Cardcontainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px 0px;
+    max-height: 71vh;
+    overflow-y: auto;
+    justify-content: flex-start;
+}
+
+.card:hover {
+    background-color: rgb(43, 43, 43);
+}
+
+.play {
+    background-color: rgb(30, 214, 94);
+    border-radius: 100px;
+    width: 45px;
+    height: 45px;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 65px;
+    right: 19px;
+    opacity: 0;
+    transition: all 0.26s ease-out;
+}
+
+.card:hover {
+    .play {
+        opacity: 1;
+        bottom: 75px;
+    }
+
+    .play:hover {
+        transform: scale(1.2);
+    }
+}
+
+.right {
+    position: relative;
+    height: 555px;
+}
+
+.playbar {
+    position: absolute;
+    bottom: -68px;
+    left: 1px;
+    background-color: #000000;
+    width: 100%;
+    height: 75px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap-reverse;
+}
+
+.center {
+    background-color: white;
+    border-radius: 20px;
+    width: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 35px;
+    transition: transform 0.5s ease-in-out;
+    position: absolute;
+}
+
+.center img {
+    width: 25px;
+}
+
+.center:hover {
+    width: 38px;
+    height: 38px;
+}
+
+.center:hover img {
+    width: 28px;
+
+}
+
+.center:active {
+    width: 33px;
+    height: 33px;
+}
+
+.center:active img {
+    width: 25px;
+
+}
+
+
+.playbuttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+    height: 100%;
+}
+
+.Library ul {
+    padding: 0px 5px;
+    /* border: 2px solid green; */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    overflow-y: auto;
+    max-height: 250px;
+}
+
+.Library ul li {
+    list-style-type: decimal;
+    display: flex;
+    gap: 12px;
+    position: relative;
+    font-weight: 700;
+    padding: 10px 4px;
+    border-radius: 6px;
+}
+
+.info :last-child {
+    font-size: 14px;
+    color: #b3b3b3;
+}
+
+.leftside {
+    background-color: rgb(30, 214, 94);
+    border-radius: 100px;
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 3px;
+    right: 10px;
+    opacity: 0;
+    transition: all 0.25s ease-out;
+}
+
+.Library ul li:hover {
+    background-color: rgb(43, 43, 43);
+    cursor: pointer;
+}
+
+.Library ul li:hover {
+    .play {
+        opacity: 1;
+        bottom: 13px;
+    }
+
+    .play:hover {
+        transform: scale(1.2);
+    }
+}
+
+.seekbar {
+    height: 4px;
+    width: 43%;
+    background-color: rgb(255, 255, 255);
+    position: relative;
+    border-radius: 20px;
+    position: absolute;
+    bottom: 7px;
+    left: 28%;
+    cursor: pointer;
+}
+
+.chupatabra {
+    height: 4px;
+    width: 0%;
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    border-radius: 20px;
+    position: absolute;
+    /* bottom: 7px; */
+    /* left: 300px; */
+    background-color: rgb(30, 186, 85);
+    transition: all 0.1s ease-in-out;
+}
+
+#barinfo {
+    width: 230px;
+}
+
+#bartime {
+    
+    height: 90%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.circle {
+    width: 18px;
+    height: 18px;
+    background-color: #fff;
+    border-radius: 20px;
+    position: absolute;
+    top: -7px;
+    right: -17px;
+    opacity: 0;
+}
+
+.seekbar:hover .circle {
+
+    opacity: 1;
+
+}
+
+.otherthanli {
+    display: flex;
+    gap: 11px;
+    margin-top: 10px;
+    margin-left: 7px;
+    height: 55px;
+}
+
+.otherthanli img {
+    width: 40px;
+}
+
+.otherthanli .info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.otherthanli .info :first-child {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.otherthanli .info :last-child {
+    font-size: 15px;
+}
+
+.hamburg {
+    display: none;
+    height: 50px;
+    width: 50px;
+    background-color: rgb(0, 0, 0);
+    border-radius: 50px;
+    margin-left: 20px;
+}
+
+.hamburg img {
+    width: 25px;
+}
+
+.cross {
+    width: 50px;
+    height: 50px;
+    background-color: black;
+    border-radius: 50px;
+    display: none;
+    position: absolute;
+    right: 15px;
+    top: 12px;
+}
+
+.cross img {
+    width: 17px;
+}
+.timevolume{
+    width: 243px;
+    position: relative;
+    top: 11px;
+    right: 23px;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    gap: 5px;
+}
+#volume{
+    position: relative;
+    right: 0px;
+   display: flex;
+   gap: 8px;
+}
+.range{
+    display: flex;
+    align-items: center;
+}
+#mute{
+    cursor: pointer;
+}
+#hilo{
+    accent-color: red;
+}
+@media (max-width: 1150px) {
+    .left {
+        background-color: black;
+        position: absolute;
+        left: -110%;
+        transition: left 0.55s ease-in-out;
+        z-index: 1;
+        /* left: 0;  in click */
+        width: 350px;
+        padding-right: 0px;
+        height: 94%;
+    }
+
+    .Library {
+        height: 79%;
+    }
+
+    .list-things {
+        height: 60%;
+    }
+
+    .Library ul {
+        max-height: 100%;
+    }
+
+    .right {
+        width: 100vw;
+    }
+
+    .hamburg {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .cross {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .nav {
+        display: none;
+    }
+}
+
+@media (max-width:750px) {
+    .seekbar {
+        width: 100%;
+        bottom: 100%;
+        left: 0;
+    }
+
+    .left {
+        width: 98%;
+    }
+
+    .otherthanli img {
+        width: 35px;
+    }
+
+    .otherthanli .info :first-child {
+        font-size: 18px;
+        font-weight: 600;
+    }
+
+    .otherthanli .info :last-child {
+        font-size: 14px;
+        font-weight: 600;
+    }
+
+    #barinfo {
+        width: 200px;
+    }
+
+    .playbuttons {
+        gap: 70px;
+    }
+
+    .playbuttons :nth-child(1) {
+        width: 18px;
+    }
+
+    .playbuttons :last-child {
+        width: 18px;
+    }
+
+    .playbuttons .center {
+        width: 30px;
+        height: 30px;
+    }
+
+    #bartime {
+        width: 111px;
+        font-size: 15px;
+    }
+
+    .playbuttons {
+        position: absolute;
+        bottom: 0;
+        left: 42%;
+    }
+}
+
+@media (max-width:550px) {
+    .card {
+        width: 80%;
+        height: auto;
+    }
+
+    .card {
+        
+        font-size: 19px;
+    }
+    .Cardcontainer{
+        justify-content: center;
+        height: 97%;
+    }
+
+    .card h4 {
+        font-size: 26px;
+    }
+.spot-playlist h2{
+    margin: auto;
+    width: 288px;
+    margin-bottom: 20px;
+    font-size: 36px;
+    font-weight: 700;
+}
+.timevolume{
+        display: none;
+    }
+
+    .right {
+        position: static;
+    }
+
+    .playbar {
+        bottom: 10px;
+        left: 0px;
+    }
+
+    .playbuttons {
+        right: 10%;
+        position: static;
+        margin-right: 22px;
+    }
+
+}
+
+@media (max-height:690px) {
+    .left {
+        height: 88%;
+    }
+}
+
+@media (max-width:1150px) {
+    .container {
+        height: 100vh;
+    }
+
+    .right {
+        height: 92%;
+        position: static;
+    }
+
+    .spot-playlist {
+        height: 75%;
+    }
+
+    .playbar {
+        bottom: 10px;
+        left: 0px;
+    }
+}

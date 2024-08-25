@@ -1,0 +1,45 @@
+.border {
+    /* border: 2px solid green; */
+    margin: 4px;
+}
+
+.justify {
+    justify-content: center;
+}
+
+.align {
+    align-items: center;
+}
+
+.flex {
+    display: flex;
+}
+.black{
+    background-color: #121212;
+    color: white;
+}
+.rounded{
+    border-radius: 9px;
+}
+/* Hide the default scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #333; /* Dark background color */
+    border-radius: 3px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #666; /* Medium-dark color for the handle */
+    border-radius: 8px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #888; /* Lighter color on hover */
+    
+}
