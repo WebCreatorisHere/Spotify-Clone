@@ -85,7 +85,7 @@ const playmusic = (track, pausea = false) => {
 }
 
 const displayalbums = async () => {
-    let aj = await fetch(`/songs/`)
+    let aj = await fetch(`/public/songs/`)
     let response = await aj.text()
     let element = document.createElement("div")
     element.innerHTML = response
@@ -98,11 +98,11 @@ const displayalbums = async () => {
         const e = arayass[index];
 
 
-        if (e.href.includes("/songs/") && !e.href.includes(".htaccess")) {
-            let folder = e.href.split("/songs/").slice(-1)
+        if (e.href.includes("/public/songs/") && !e.href.includes(".htaccess")) {
+            let folder = e.href.split("/public/songs/").slice(-1)
 
             // get metadata of every folder
-            let aj = await fetch(`/songs/${folder}/info.json`)
+            let aj = await fetch(`/public/songs/${folder}/info.json`)
             let response = await aj.json()
             // console.log(response)
 
@@ -115,7 +115,7 @@ const displayalbums = async () => {
             </path>
         </svg>
     </div>
-    <img src="/songs/${folder}/car.jpeg"
+    <img src="/public/songs/${folder}/car.jpeg"
         alt="">
 
     <h4>${response.title}</h2>
@@ -127,7 +127,7 @@ const displayalbums = async () => {
     // load the playlist whenever the card is clicked
     Array.from(document.getElementsByClassName("card")).forEach(card => {
         card.addEventListener("click", async (item) => {
-            songs = await getsong(`songs/${item.currentTarget.dataset.folder}`)
+            songs = await getsong(`public/songs/${item.currentTarget.dataset.folder}`)
             // target se jis cheez pe click hua hai vo milega par currtarget se jisse target karva rahe hai use lenge
        playmusic(songs[0])
         })
@@ -140,7 +140,7 @@ async function main() {
 
 
     //Get the list of all songs
-    await getsong("songs/ncs")
+    await getsong("public/songs/ncs")
     playmusic(songs[0], true)
     // console.log(songs)
 
